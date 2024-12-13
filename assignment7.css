@@ -1,0 +1,115 @@
+		ul.a {list-style-type: circle;}
+		ul.b {list-style-type: square;}
+	   
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: rgba(50, 128, 50, 0.3);
+            color: #333;
+        }
+
+        header {
+			background-image: url('IMG_7292.jpg');
+			background-size: 100% auto;
+			background-position: center;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+		
+		header h1 {
+			font-size: 36px; 
+			margin-bottom: 10px;
+		}
+		
+		header h2 {
+			font-size: 24px; 
+			margin-bottom: 15px;
+		}
+		
+		main h2 {
+			font-family: Century Gothic;
+		}
+		
+		footer {
+            color: #fff;
+            text-align: center;
+			color: #333; 
+			text-align: center; 
+			padding: 0;
+        }
+		
+		nav ul {
+			font-family: TaHoma;
+            list-style: none;
+            padding-top: 10px;
+			padding-bottom: 0px;
+            margin: 0;
+            text-align: center;
+            display: flex; 
+            justify-content: center;
+        }
+
+        nav ul li {
+            display: inline-block; 
+            margin-right: 20px;
+        }
+		
+		ul {
+			margin-left: 20px; 
+			color: #555;
+		}
+		
+		table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+			border-style: solid;
+			border-width: 2px;
+        }
+
+		table p {
+			padding-top: 25px
+		}
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+		
+		#pictures img {
+            display: none;
+        }
+		
+		.setup {
+		padding-left: 30px; 
+		padding-top: 1px;
+		padding-bottom: 15px;
+		margin: 20px 0; 
+		background-color: white;
+		border-color: gray;
+		border-style: solid;
+		border-width: 1px;
+		border-radius: 10px; 
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+		}
+		
+		.image {
+		display: flex;
+		justify-content: space-between; 
+		}
+		
+		.footerP {
+			font-size: 10px;
+		}
+		
+		.textP {
+			padding-top: 25px
+		}

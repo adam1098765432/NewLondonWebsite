@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New London, Wisconsin - Your Destination</title>
+    <link rel="stylesheet" href="assignment7.css">
+	
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('attractionsList').addEventListener('click', function (event) {
+            if (event.target.tagName === 'LI' && event.target.getAttribute('data-info')) {
+                var details = document.getElementById('attractionDetails');
+                details.innerHTML = details.innerHTML === event.target.getAttribute('data-info') ? '' : '<p>' + event.target.getAttribute('data-info') + '</p>';
+            }
+        });
+    });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var pictureIndex = 0;
+        var pictureDescriptions = [
+            'Sturgeon Trail',
+            'Beautiful Sky',
+            'Town Hall',
+            'Overview of City',
+            'High School'
+        ];
+
+        var picturesSection = document.getElementById('pictures');
+        picturesSection.style.display = 'block';
+
+        var pictures = document.querySelectorAll('#pictures img');
+        pictures[0].style.display = 'block';
+
+        setInterval(function () {
+            pictures[pictureIndex].style.display = 'none';
+            pictureIndex = (pictureIndex + 1) % pictures.length;
+            pictures[pictureIndex].style.display = 'block';
+            document.querySelector('#pictures h2').textContent = pictureDescriptions[pictureIndex];
+        }, 3000);
+    });
+</script>
+
+	
+</head>
+ 
+<body>
+    <header>
+        <h1>New London</h1>
+        <h2>Welcome to New London, Wisconsin!</h2>
+        <p>Discover the Charm of Our City</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#attractions">Local Attractions</a></li>
+            <li><a href="#companies">Top Employers</a></li>
+			<li><a href="#hotels">Places to Stay</a></li>
+            <li><a href="#pictures">Pictures</a></li>
+			<li><a href="#tables">Useful Information</a></li>
+			<li><a href="#links">Related Websites</a></li>
+        </ul>
+    </nav>
+
+    <main>
+		<div class="setup">
+        <section>
+            <h2 id="attractions">Local Attractions</h2>
+            <ul class="a" id="attractionsList">
+                <li data-info="Explore the beautiful Hatten Park founded in 1936. This 120 acre park was part of President Franklin Roosevelt's Work Projects.">Hatten Park</li>
+				<li data-info="Scenic trail for sturgeon enthusiasts. Every year sturgeon spawn here putting on a show for everyone to see.">Sturgeon Trail</li>
+                <li data-info="Enjoy the beautiful Wisconsin weather tubing on the Little Wolf River!">Wolf River Trips and Campground</li>
+                <li data-info="Witness the history of this historic town founded in 1851">New London Museum</li>
+				<li data-info="This place is open year-round on 441 acres adjacent to the Wolf River.  There are three miles of developed hiking and walking trails with a loop to scenic vistas on top of Mosquito Hill, one of the highest elevation points in the area.">Mosquito Hill Nature Center</li>
+				<li data-info="Explore the river that flows right through the middle of New London. This river has amazing kayaking and fishing availability!">Wolf River for Kayaking and Fishing</li>
+				<li data-info="Go golfing at the local golf course with fun for the whole family. This 18 hole course is very well maintained and has lots of fun courses. There is also a restaurant on course which is known for very good food.">Shamrock Heights Golf</li>
+				<li data-info="Spooks on Spurr is a haunted attraction. The old 'Spurr Mansion,' as the local folks call it, is a beautiful house built in the 1800's. Every year this place hosts live bands and draws all of the locals in for a scare.">Spooks on Spurr</li>
+            </ul>
+			<h6>Click on these for more information</h6>
+			<div id="attractionDetails"></div>
+        </section>
+		</div>
+		
+		<div class="setup">
+		<section>
+            <h2 id="companies">Top Employers</h2>
+            <ul class="b">
+                <li>Stalker Sports Flooring</li>
+				<li>Festival Foods</li>
+				<li>Walmart</li>
+				<li>Amcor</li>
+				<li>Tyson Foods</li>
+				<li>Theda Care</li>
+				<li>Steel King Industries</li>
+				<li>New London School District</li>
+            </ul>
+        </section>
+		</div>
+		
+		<div class="setup">
+        <section>
+            <h2 id="hotels">Places to Stay</h2>
+            <ul>
+                <li>Rainbow Motel - 3.7&star; </li>
+				<li>AmericInn by Wyndham - 4.2&star; </li>
+                <li>Quality Inn - 4.0&star; </li>
+                <li>Antiques With Inn - 4.3&star; </li>
+				<li>There are also many vacational rentals!</li>
+            </ul>
+        </section>
+		</div>
+		
+		<div class="setup image">
+			<section id="pictures" style="display: none;">
+				<h2>Sturgeon Trail</h2>
+				<img src="IMG_10999.JPG" alt="Sturgeon Trail" width="400" height="300">
+				<img src="IMG_4823.jpg" alt="Beautiful Sky" width="300" height="400">
+				<img src="IMG_12122.jpg" alt="Town Hall" width="400" height="300">
+				<img src="IMG_111.jpg" alt="Overview of City" width="400" height="300">
+				<img src="highscool.jpg" alt="High School" width="400" height="300">
+			</section>
+		</div>
+		
+		<div class="setup">
+        <section id="tables">
+            <h2>Useful Information</h2>
+			<p>New London, Wisconsin Weather</p>
+            <table>
+        <tr>
+            <th>Day</th>
+            <th>Weather</th>
+            <th>Temperature(F)</th>
+        </tr>
+		<tr>
+            <td>Sunday  <em>(1/7)</em></td>
+            <td>Mostly Cloudy</td>
+            <td>22-26</td>
+        </tr>
+        <tr>
+            <td>Monday  <em>(1/8)</em></td>
+            <td>Cloudy</td>
+            <td>31-36</td>
+        </tr>
+        <tr>
+            <td>Tuesday  <em>(1/9)</em></td>
+            <td>Snow</td>
+            <td>26-34</td>
+        </tr>
+		<tr>
+            <td>Wednesday  <em>(1/10)</em></td>
+            <td>Mostly Cloudy</td>
+            <td>21-31</td>
+        </tr>
+		<tr>
+            <td>Thursday  <em>(1/11)</em></td>
+            <td>AM Snow Showers</td>
+            <td>17-28</td>
+        </tr>
+		<tr>
+            <td>Friday  <em>(1/12)</em></td>
+            <td>Snow Showers</td>
+            <td>16-24</td>
+        </tr>
+		<tr>
+            <td>Saturday  <em>(1/13)</em></td>
+            <td>AM Snow Showers</td>
+            <td>6-20</td>
+        </tr>
+    </table>
+        </section>
+		<div class="textP">
+		<p>New London, Wisconsin Schools</p>
+		</div>
+    <table>
+        <tr>
+            <th>School Name</th>
+            <th>Type</th>
+            <th>Number of Students</th>
+            <th>Location</th>
+        </tr>
+        <tr>
+            <td>New London High School</td>
+            <td>High School</td>
+            <td>800</td>
+            <td>1700 Klatt Rd, New London, WI</td>
+        </tr>
+        <tr>
+            <td>New London Middle School</td>
+            <td>Middle School</td>
+            <td>600</td>
+            <td>1000 W Washington St, New London, WI</td>
+        </tr>
+        <tr>
+            <td>Parkview Elementary School</td>
+            <td>Elementary School</td>
+            <td>400</td>
+            <td>1300 Werner Allen Rd, New London, WI</td>
+        </tr>
+		<tr>
+            <td>Lincoln Elementary School</td>
+            <td>Elementary School</td>
+            <td>350</td>
+            <td>201 E Washington St, New London, WI</td>
+        </tr>
+		<tr>
+            <td>Sugarbush Elementary School</td>
+            <td>Elementary School</td>
+            <td>145</td>
+            <td>W10736 County Rd WW, New London, WI</td>
+        </tr>
+		<tr>
+            <td>Readfield Elementary School</td>
+            <td>Elementary School</td>
+            <td>165</td>
+            <td>E9177 WI-96, Freemont, WI</td>
+        </tr>
+    </table>
+		</div>
+		
+		<div class="setup">
+        <section id="links" >
+            <h2>Related Websites</h2>
+            <p>Visit the following websites for more information:</p>
+            <ul>
+                <li><a href="https://www.newlondonwi.org">New London City Website</a></li>
+                <li><a href="https://www.newlondon.k12.wi.us">School District</a></li>
+                <li><a href="https://www.youtube.com/user/NewLondonAccess">City of New London YouTube</a></li>
+                <li><a href="https://newlondonchamber.com">New London Events</a></li>
+				<li><a href="https://www.newlondontourism.com">New London Tourism Page</a></li>
+				<li><a href="https://docs.google.com/document/d/11T_0PZTs6mdfdnYGTrIrk1Clqp2Ncoz7jYi28OzM37Q/edit?usp=sharing">My Image Citations</a></li>
+			</ul>
+        </section>
+		</div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Adam McGlin</p>
+		<div class="footerP">
+		<p>Most photos were taken by me but remaining citations can be found in Related Websites</p>
+		</div>
+    </footer>
+</body>
+</html>
